@@ -5484,11 +5484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
+      "projectUniqueName": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
       "projectName": "WebStore.Domain",
-      "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
+      "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\obj\\",
+      "outputPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\",

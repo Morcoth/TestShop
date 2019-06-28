@@ -13183,11 +13183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP\\AspFromGeekBrainss\\UI\\WebStore\\WebStore.csproj",
+      "projectUniqueName": "D:\\GitHub\\AspLevel2\\UI\\WebStore\\WebStore.csproj",
       "projectName": "WebStore",
-      "projectPath": "D:\\ASP\\AspFromGeekBrainss\\UI\\WebStore\\WebStore.csproj",
+      "projectPath": "D:\\GitHub\\AspLevel2\\UI\\WebStore\\WebStore.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP\\AspFromGeekBrainss\\UI\\WebStore\\obj\\",
+      "outputPath": "D:\\GitHub\\AspLevel2\\UI\\WebStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -13208,20 +13208,20 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
-              "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+            "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+              "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
             },
-            "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Clients\\WebStore.Clients.csproj": {
-              "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Clients\\WebStore.Clients.csproj"
+            "D:\\GitHub\\AspLevel2\\Services\\WebStore.Clients\\WebStore.Clients.csproj": {
+              "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Clients\\WebStore.Clients.csproj"
             },
-            "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
-              "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.DAL\\WebStore.DAL.csproj"
+            "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
+              "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj"
             },
-            "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
-              "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj"
+            "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+              "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj"
             },
-            "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Services\\WebStore.Services.csproj": {
-              "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Services\\WebStore.Services.csproj"
+            "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj": {
+              "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj"
             }
           }
         }

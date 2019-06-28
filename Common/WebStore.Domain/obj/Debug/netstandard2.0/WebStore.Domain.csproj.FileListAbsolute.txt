@@ -1,9 +1,0 @@
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.deps.json
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.dll
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.pdb
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.csprojAssemblyReference.cache
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.csproj.CoreCompileInputs.cache
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.AssemblyInfoInputs.cache
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.AssemblyInfo.cs
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.dll
-D:\ASP\AspFromGeekBrainss\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {}
+    "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {}
   },
   "projects": {
-    "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+    "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
         "projectName": "WebStore.Domain",
-        "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\obj\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -74,14 +74,14 @@
         }
       }
     },
-    "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+    "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
         "projectName": "WebStore.Interfaces",
-        "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP\\AspFromGeekBrainss\\Services\\WebStore.Interfaces\\obj\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -102,8 +102,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
-                "projectPath": "D:\\ASP\\AspFromGeekBrainss\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+              "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
               }
             }
           }
