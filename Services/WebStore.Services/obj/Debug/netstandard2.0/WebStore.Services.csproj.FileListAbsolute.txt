@@ -1,0 +1,16 @@
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Services.deps.json
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Services.dll
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Services.pdb
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.DAL.dll
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Domain.dll
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Interfaces.dll
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Domain.pdb
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.DAL.pdb
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\bin\Debug\netstandard2.0\WebStore.Interfaces.pdb
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.csprojAssemblyReference.cache
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.csproj.CoreCompileInputs.cache
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.AssemblyInfoInputs.cache
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.AssemblyInfo.cs
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.csproj.CopyComplete
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.dll
+D:\ASP\AspFromGeekBrainss\Services\WebStore.Services\obj\Debug\netstandard2.0\WebStore.Services.pdb
