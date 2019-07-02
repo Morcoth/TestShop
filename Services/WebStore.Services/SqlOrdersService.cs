@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
+using WebStore.Domain.DTO.Order;
 using WebStore.Domain.Entities;
 using WebStore.Domain.ViewModels.Cart;
 using WebStore.Domain.ViewModels.Order;
@@ -34,7 +35,7 @@ namespace WebStore.Services
             return _db.Orders.Include(o => o.OrderItems).FirstOrDefault(o => o.Id == id);
         }
 
-        public Order CreateOrder(OrderViewModel OrderModel, CartViewModel CartModel, string UserName)
+        public Order CreateOrder(CreateOrderModel CartModel, string UserName)
         {
             var user = _UserManager.FindByNameAsync(UserName).Result;
 
@@ -42,19 +43,19 @@ namespace WebStore.Services
             {
                 var order = new Order
                 {
-                    Name = OrderModel.Name,
-                    Address = OrderModel.Address,
-                    Phone = OrderModel.Phone,
+                    Name = CartModel.OrderVM.Name,
+                    Address = CartModel.OrderVM.Address,
+                    Phone = CartModel.OrderVM.Phone,
                     User = user,
                     Date = DateTime.Now
                 };
 
                 _db.Orders.Add(order);
 
-                foreach (var item in CartModel.Items)
+                foreach (var item in CartModel.OrderItemsDTO)
                 {
-                    var product_model = item.Key;
-                    var quantity = item.Value;
+                    var product_model = _db.Products.FirstOrDefault(p => p.Id == item.Id);
+                    var quantity = _db.Products.FirstOrDefault(p=>p.Id==product_model.Id);
                     var product = _db.Products.FirstOrDefault(p => p.Id == product_model.Id);
                     if(product is null)
                         throw new InvalidOperationException($"Товар с идентификатором {product_model.Id} в базе данных не найден");
@@ -63,7 +64,7 @@ namespace WebStore.Services
                     {
                         Order = order,
                         Price = product.Price,
-                        Quantity = quantity,
+                        Quantity = item.Quantity,
                         Product = product
                     };
 
@@ -75,6 +76,11 @@ namespace WebStore.Services
 
                 return order;
             }
+        }
+
+        IEnumerable<CreateOrderModel> IOrderService.GetUserOrders(string UserName)
+        {
+            throw new NotImplementedException();
         }
     }
 }

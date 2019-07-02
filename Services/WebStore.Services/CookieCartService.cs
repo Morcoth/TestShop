@@ -124,11 +124,7 @@ namespace WebStore.Services
 
             var products_view_models = products.Select(p => new ProductViewModel
             {
-                Id = p.Id,
                 Name = p.Name,
-                Order = p.Order,
-                Price = p.Price,
-                ImageUrl = p.ImageUrl,
                 Brand = p.Brand?.Name
             });
 

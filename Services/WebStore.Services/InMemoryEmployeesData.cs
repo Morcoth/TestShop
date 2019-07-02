@@ -38,5 +38,17 @@ namespace WebStore.Services
         }
 
         public void SaveChanges() { }
+
+        public Employee Update(int id, Employee employee)
+        {
+            if (employee is null) throw new ArgumentNullException(nameof(employee));
+            var db_employee = GetById(id);
+            if (db_employee is null) throw new InvalidOperationException($"Сотрудник {employee} не найден ");
+            db_employee.Age = employee.Age;
+            db_employee.FirstName = employee.FirstName;
+            db_employee.Patronymic = employee.Patronymic;
+            db_employee.SurName = employee.SurName;
+            return db_employee;
+        }
     }
 }
