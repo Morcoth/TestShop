@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace WebStore.Clients.Base
 {
-    public abstract class BaseClient
+    public abstract class BaseClient :IDisposable
     {
         protected readonly HttpClient _Client;
 
@@ -54,5 +54,9 @@ namespace WebStore.Clients.Base
         }
         protected HttpResponseMessage Delete(string url) => DeleteAsync(url).Result;
 
+        public void Dispose()
+        {
+            _Client.Dispose();
+        }
     }
 }

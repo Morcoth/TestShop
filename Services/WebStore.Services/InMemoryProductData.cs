@@ -17,7 +17,7 @@ namespace WebStore.Services
 
         public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter)
         {
-            IEnumerable<ProductDTO> products = TestData.Products;
+            IEnumerable<ProductDTO> products = TestData.ProductToProductDTO(TestData.Products);
             if (Filter is null) return products;
             if (Filter.BrandId != null)
                 products = products.Where(product => product.Brand.Id == Filter.BrandId);
