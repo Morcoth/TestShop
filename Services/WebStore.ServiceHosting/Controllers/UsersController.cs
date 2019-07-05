@@ -38,13 +38,52 @@ namespace WebStore.ServiceHosting.Controllers
         /// <summary>Получить всех пользователей в системе</summary>
         /// <returns>Возвращает список всех пользователей из базы данных</returns>
         [HttpGet("AllUsers")]
-        public async Task<IEnumerable<User>> GetAllUsers() => await _UserStore.Users.ToArrayAsync();
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            try
+            {
+                _Logger.LogInformation("Запрос всех пользователей");
+                return await _UserStore.Users.ToArrayAsync();
+            }
+            catch (Exception ex)
+            {
+                _Logger.LogInformation($"Запрос всех пользователей не удался, ошибка {ex}") ;
+                return null;
+            }
+        }
 
         [HttpPost("UserId")]
-        public async Task<string> GetUserIdAsync([FromBody] User user) => await _UserStore.GetUserIdAsync(user);
+        public async Task<string> GetUserIdAsync([FromBody] User user)
+        {
+            try
+            {
+                _Logger.LogInformation($"Пользователь {user.Id} был запрошен по ID");
+                var result = await _UserStore.GetUserIdAsync(user);
+                return result;
+
+            }
+            catch(Exception ex)
+            {
+                _Logger.LogInformation($"Ошибка получения пользователя {user.Id}, ошибка {ex}");
+                return String.Empty;
+            }
+        }
 
         [HttpPost("UserName")]
-        public async Task<string> GetUserNameAsync([FromBody] User user) => await _UserStore.GetUserNameAsync(user);
+        public async Task<string> GetUserNameAsync([FromBody] User user)
+        {
+            try
+            {
+                _Logger.LogInformation($"Имя пользователя {user.Id} было запрошено");
+                return await _UserStore.GetUserNameAsync(user);
+            }
+            catch (Exception ex)
+            {
+                _Logger.LogInformation($"Ошибка получения имени пользователя {user.UserName}, ошибка {ex}");
+                return string.Empty;
+
+            }
+        }
 
         [HttpPost("UserName/{name}")]
         public async Task SetUserNameAsync([FromBody] User user, string name) => await _UserStore.SetUserNameAsync(user, name);
