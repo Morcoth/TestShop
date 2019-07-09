@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using log4net.Core;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Domain.DTO.Order;
 using WebStore.Domain.ViewModels.Cart;
@@ -14,10 +15,12 @@ namespace WebStore.Controllers
     {
         private readonly ICartService _CartService;
         private readonly IOrderService _OrderService;
+        private readonly ILogger _logger;
 
-        public CartController(ICartService CartService, IOrderService OrderService)
+        public CartController(ICartService CartService, IOrderService OrderService, ILogger logger)
         {
             _CartService = CartService;
+            _logger = logger;
             _OrderService = OrderService;
         }
 
