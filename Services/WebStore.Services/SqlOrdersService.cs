@@ -30,12 +30,18 @@ namespace WebStore.Services
                 .Where(order => order.User.UserName == UserName)
                 .ToArray();
 
-        public Order GetOrderById(int id)
+        public OrderDTO GetOrderById(int id)
         {
-            return _db.Orders.Include(o => o.OrderItems).FirstOrDefault(o => o.Id == id);
+            var t = _db.Orders.Include(o => o.OrderItems).FirstOrDefault(o => o.Id == id);
+            return new OrderDTO
+            {
+                Address = t.Address,
+                Id = t.Id,
+                Phone = t.Phone
+            };
         }
 
-        public Order CreateOrder(CreateOrderModel CartModel, string UserName)
+        public OrderDTO CreateOrder(CreateOrderModel CartModel, string UserName)
         {
             var user = _UserManager.FindByNameAsync(UserName).Result;
 
@@ -55,9 +61,9 @@ namespace WebStore.Services
                 foreach (var item in CartModel.OrderItemsDTO)
                 {
                     var product_model = _db.Products.FirstOrDefault(p => p.Id == item.Id);
-                    var quantity = _db.Products.FirstOrDefault(p=>p.Id==product_model.Id);
+                    var quantity = _db.Products.FirstOrDefault(p => p.Id == product_model.Id);
                     var product = _db.Products.FirstOrDefault(p => p.Id == product_model.Id);
-                    if(product is null)
+                    if (product is null)
                         throw new InvalidOperationException($"Товар с идентификатором {product_model.Id} в базе данных не найден");
 
                     var order_item = new OrderItem
@@ -74,7 +80,12 @@ namespace WebStore.Services
                 _db.SaveChanges();
                 transaction.Commit();
 
-                return order;
+                return new OrderDTO
+                {
+                    Id = order.Id,
+                    Phone = order.Phone,
+                    Address = order.Address
+                };
             }
         }
 

@@ -23,7 +23,11 @@ namespace WebStore.Controllers
             _logger = logger;
             _OrderService = OrderService;
         }
-
+        public CartController(ICartService CartService, IOrderService OrderService)
+        {
+            _CartService = CartService;
+            _OrderService = OrderService;
+        }
         public IActionResult Details()
         {
             var model = new DetailsViewModel

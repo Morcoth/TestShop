@@ -25,12 +25,12 @@ namespace WebStore.ServiceHosting.Controllers
         }
 
         [HttpPost("{UserName}"), ActionName("post")]
-        public Order CreateOrder([FromBody]CreateOrderModel CartModel, string UserName)
+        public OrderDTO CreateOrder([FromBody]CreateOrderModel CartModel, string UserName)
         {
             return _orderService.CreateOrder(CartModel, UserName);
         }
         [HttpGet("{id}"), ActionName("get")]
-        public Order GetOrderById(int id)
+        public OrderDTO GetOrderById(int id)
         {
             return _orderService.GetOrderById(id);
         }
