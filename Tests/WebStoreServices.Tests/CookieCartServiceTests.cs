@@ -21,7 +21,8 @@ namespace WebStoreServices.Tests
         {
 
             const int expectedCount = 5;
-            var cart = new Cart() {
+            var cart = new Cart()
+            {
                 Items = new List<CartItem>
                 {
                     new CartItem {ProductId = 1, Quantity = 2 },
@@ -40,7 +41,7 @@ namespace WebStoreServices.Tests
             const int expectedCount = 6;
             var cart_view_model = new CartViewModel
             {
-                 Items = new Dictionary<ProductViewModel, int>
+                Items = new Dictionary<ProductViewModel, int>
                  {
                      { new ProductViewModel { Id = 1, Name = "Item 1",Price = 0.5m}, 1 },
                      { new ProductViewModel { Id = 2, Name = "Item 2",Price = 1.5m}, 2 },
@@ -98,10 +99,55 @@ namespace WebStoreServices.Tests
             Assert.Equal(3, cart.ItemsCount);
             Assert.Equal(2, cart.Items[0].ProductId);
 
-
-
-
         }
+
+        [TestMethod]
+        public void ClearTheCartCorrect()
+        {
+            var cart = new Cart
+            {
+                Items = new List<CartItem>
+                {
+                    new CartItem{ ProductId = 1, Quantity = 1},
+                    new CartItem{ ProductId = 2, Quantity = 3},
+                    new CartItem{ ProductId = 3, Quantity = 5}
+                }
+
+            };
+            var productdatamock = new Mock<IProductData>();
+            var cartstoremock = new Mock<ICartStore>();
+            cartstoremock.Setup(c => c.Cart)
+                .Returns(cart);
+            var cartservidse = new CookieCartService(productdatamock.Object, cartstoremock.Object);
+            cartservidse.RemoveAll();
+            Assert.Equal(0, cart.ItemsCount);
+        }
+
+
+        [TestMethod]
+        public void DecrementFromCartCheck()
+        {
+            var expectedquantitycart = 5;
+            var allProductsend = 8; 
+            var indexOfElement = 1;
+            var cart = new Cart
+            {
+                Items = new List<CartItem>
+                {
+                    new CartItem{ ProductId = 1, Quantity = 6},
+                    new CartItem{ ProductId = 2, Quantity = 3}
+                }
+            };
+            var productdatamock = new Mock<IProductData>();
+            var cartstoremock = new Mock<ICartStore>();
+            cartstoremock.Setup(c => c.Cart)
+                         .Returns(cart);
+            var cartservidse = new CookieCartService(productdatamock.Object, cartstoremock.Object);
+            cartservidse.DecrementFromCart(1);
+            Assert.Equal(expectedquantitycart, cart.Items.FirstOrDefault(x=>x.ProductId == indexOfElement).Quantity);
+            Assert.Equal(allProductsend, cart.ItemsCount);
+        }
+
 
     }
 }
