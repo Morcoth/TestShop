@@ -74,6 +74,184 @@
         }
       }
     },
+    "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\WebStore.Logger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\WebStore.Logger.csproj",
+        "projectName": "WebStore.Logger",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\WebStore.Logger.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj",
+        "projectName": "WebStore.DAL",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
+        "projectName": "WebStore.Interfaces",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "D:\\GitHub\\AspLevel2\\Services\\WebStore.ServiceHosting\\WebStore.ServiceHosting.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -104,6 +282,18 @@
             "projectReferences": {
               "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
                 "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\WebStore.Logger.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Logger\\WebStore.Logger.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj"
               }
             }
           }
@@ -128,10 +318,106 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "MySql.Data.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj",
+        "projectName": "WebStore.Services",
+        "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\WebStore.Services.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Common\\WebStore.Domain\\WebStore.Domain.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.DAL\\WebStore.DAL.csproj"
+              },
+              "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj": {
+                "projectPath": "D:\\GitHub\\AspLevel2\\Services\\WebStore.Interfaces\\WebStore.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
               "autoReferenced": true
             }
           },

@@ -1,0 +1,9 @@
+D:\GitHub\AspLevel2\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.deps.json
+D:\GitHub\AspLevel2\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.dll
+D:\GitHub\AspLevel2\Common\WebStore.Domain\bin\Debug\netstandard2.0\WebStore.Domain.pdb
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.csprojAssemblyReference.cache
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.AssemblyInfoInputs.cache
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.AssemblyInfo.cs
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.dll
+D:\GitHub\AspLevel2\Common\WebStore.Domain\obj\Debug\netstandard2.0\WebStore.Domain.pdb

@@ -1632,7 +1632,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4",
           "WebStore.Domain": "1.0.0"
         },
         "compile": {

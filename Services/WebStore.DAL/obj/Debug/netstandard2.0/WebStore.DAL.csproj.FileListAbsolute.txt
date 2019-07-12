@@ -1,0 +1,12 @@
+D:\GitHub\AspLevel2\Services\WebStore.DAL\bin\Debug\netstandard2.0\WebStore.DAL.deps.json
+D:\GitHub\AspLevel2\Services\WebStore.DAL\bin\Debug\netstandard2.0\WebStore.DAL.dll
+D:\GitHub\AspLevel2\Services\WebStore.DAL\bin\Debug\netstandard2.0\WebStore.DAL.pdb
+D:\GitHub\AspLevel2\Services\WebStore.DAL\bin\Debug\netstandard2.0\WebStore.Domain.dll
+D:\GitHub\AspLevel2\Services\WebStore.DAL\bin\Debug\netstandard2.0\WebStore.Domain.pdb
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.csprojAssemblyReference.cache
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.csproj.CoreCompileInputs.cache
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.AssemblyInfoInputs.cache
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.AssemblyInfo.cs
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.csproj.CopyComplete
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.dll
+D:\GitHub\AspLevel2\Services\WebStore.DAL\obj\Debug\netstandard2.0\WebStore.DAL.pdb
