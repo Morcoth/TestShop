@@ -31,11 +31,23 @@ namespace WebStore.ServiceHosting.Controllers
         {
             return _productData.GetProductById(id);
         }
+
+
+
+        [HttpGet("sections/{id}")]
+        public Section GetSectionById(int id) => _productData.GetSectionById(id);
+
+        [HttpGet("brands/{id}")]
+        public Brand GetBrandById(int id) => _productData.GetBrandById(id);
+
         [HttpPost, ActionName("Post")]
         public IEnumerable<ProductDTO> GetProducts([FromBody]ProductFilter Filter)
         {
             return _productData.GetProducts(Filter);
         }
+
+
+
         [HttpGet, ActionName("GetSections")]
         public IEnumerable<Section> GetSections()
         {

@@ -103,5 +103,9 @@ namespace WebStore.Services
                 Price = x.Price
             };
         }
+
+        public Section GetSectionById(int id) => TestData.Sections.FirstOrDefault(s => s.Id == id);
+
+        public Brand GetBrandById(int id) => TestData.Brands.FirstOrDefault(b => b.Id == id);
     }
 }

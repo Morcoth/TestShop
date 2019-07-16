@@ -18,7 +18,14 @@ namespace WebStore.Clients.Products
         {
             return Get<List<Brand>>($"{_ServiceAddress}/GetBrands");
         }
-
+        public Section GetSectionById(int id)
+        {
+            return Get<Section>($"{_ServiceAddress}/sections/{id}");
+        }
+        public Brand GetBrandById(int id)
+        {
+            return Get<Brand>($"{_ServiceAddress}/brands/{id}");
+        }
         public ProductDTO GetProductById(int id)
         {
             return Get<ProductDTO>($"{_ServiceAddress}/Get/{id}");

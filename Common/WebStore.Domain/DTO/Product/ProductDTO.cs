@@ -15,6 +15,7 @@ namespace WebStore.Domain.DTO.Product
 
         public string ImageUrl { get; set; }
         public decimal Price { get; set; }
+        public SectionDTO Section { get; set; }
 
     }
 }

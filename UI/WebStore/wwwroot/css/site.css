@@ -20,7 +20,9 @@ a:hover {
     outline: none;
     text-decoration: none;
 }
-
+.panel-body ul li.active, .brands-name ul li.active {
+    text-decoration: underline;
+}
 a:focus {
     outline: none;
     outline-offset: 0;
