@@ -31,15 +31,19 @@ namespace WebStore.Clients.Products
             return Get<ProductDTO>($"{_ServiceAddress}/Get/{id}");
         }
 
-        public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter)
+        public PagedProductsDTO GetProducts(ProductFilter Filter)
         {
             var response = Post(_ServiceAddress, Filter);
-            return response.Content.ReadAsAsync<IEnumerable<ProductDTO>>().Result;
+
+            
+            return new PagedProductsDTO { Products = response.Content.ReadAsAsync<IEnumerable<ProductDTO>>().Result } ;
         }
 
         public IEnumerable<Section> GetSections()
         {
             return Get<List<Section>>($"{_ServiceAddress}/GetSections");
         }
+
+
     }
 }
