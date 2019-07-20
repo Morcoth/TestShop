@@ -12,25 +12,25 @@ namespace WebStore.Clients.Products
 {
     public class ProductsClient : BaseClient, IProductData
     {
-        public ProductsClient(IConfiguration Configuration) : base(Configuration, "api/values") { }
+        public ProductsClient(IConfiguration Configuration) : base(Configuration, "api/products") { }
 
-        IEnumerable<Brand> IProductData.GetBrands()
+        public IEnumerable<Brand> GetBrands()
         {
             return Get<List<Brand>>($"{_ServiceAddress}/GetBrands");
         }
 
-        ProductDTO IProductData.GetProductById(int id)
+        public ProductDTO GetProductById(int id)
         {
             return Get<ProductDTO>($"{_ServiceAddress}/Get/{id}");
         }
 
-        IEnumerable<ProductDTO> IProductData.GetProducts(ProductFilter Filter)
+        public IEnumerable<ProductDTO> GetProducts(ProductFilter Filter)
         {
             var response = Post(_ServiceAddress, Filter);
             return response.Content.ReadAsAsync<IEnumerable<ProductDTO>>().Result;
         }
 
-        IEnumerable<Section> IProductData.GetSections()
+        public IEnumerable<Section> GetSections()
         {
             return Get<List<Section>>($"{_ServiceAddress}/GetSections");
         }

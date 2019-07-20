@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebStore.Domain.DTO.Product;
 using WebStore.Domain.Entities;
 
 namespace WebStore.Services.Data
@@ -65,5 +66,20 @@ namespace WebStore.Services.Data
             new Product { Id = 11, Name = "Товар 11", Price = 1100, ImageUrl = "product11.jpg", Order = 10, SectionId = 25, BrandId = 3 },
             new Product { Id = 12, Name = "Товар 12", Price = 1200, ImageUrl = "product12.jpg", Order = 11, SectionId = 25, BrandId = 3 },
         };
+        public static IEnumerable<ProductDTO> ProductToProductDTO(List<Product> productslist)
+        {
+            
+            foreach (var i in productslist)
+            {
+                yield return new ProductDTO()
+                {
+                    Id = i.Id,
+                    ImageUrl = i.ImageUrl,
+                    Name = i.Name,
+                    Order = i.Order,
+                    Price = i.Price
+                };
+            }
+        }
     }
 }

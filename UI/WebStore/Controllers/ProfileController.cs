@@ -25,14 +25,15 @@ namespace WebStore.Controllers
         {
             var orders = _OrderService.GetUserOrders(User.Identity.Name);
 
-            return View(orders.Select(order => new UserOrderViewModel
-            {
-                Id = order.OrderVM.Id,
-                Name = order.Name,
-                Address = order.Address,
-                Phone = order.Phone,
-                TotalSum = order.OrderItems.Sum(o => o.Quantity * o.Price)
-            }));
+            /*  return View(orders.Select(order => new UserOrderViewModel
+              {
+                  Id = order.OrderVM.Id,
+                  Name = order.Name,
+                  Address = order.Address,
+                  Phone = order.Phone,
+                  TotalSum = order.OrderItems.Sum(o => o.Quantity * o.Price)
+              }));*/
+            return null;
         }
     }
 }

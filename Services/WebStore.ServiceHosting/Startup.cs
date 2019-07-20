@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebStore.DAL.Context;
+using WebStore.Domain.Entities;
 using WebStore.Interfaces.Services;
 using WebStore.Services;
 using WebStore.Services.Data;
@@ -31,6 +33,11 @@ namespace WebStore.ServiceHosting
                 options.UseMySql(Configuration.GetConnectionString("DefaultConection"));
 
             });
+            services.AddTransient<WebStoreContextInitializer>();
+            services.AddIdentity<User, IdentityRole>()
+                    .AddEntityFrameworkStores<WebStoreContext>()
+                    .AddDefaultTokenProviders();
+
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
             services.AddScoped<IProductData, SqlProductData>();
             services.AddScoped<ICartService, CookieCartService>();
@@ -50,6 +57,7 @@ namespace WebStore.ServiceHosting
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, WebStoreContextInitializer db)
         {
+            db.InitializeAsync();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

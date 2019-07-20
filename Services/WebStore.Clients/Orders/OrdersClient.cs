@@ -14,7 +14,7 @@ namespace WebStore.Clients.Orders
 {
     public class OrdersClient : BaseClient, IOrderService
     {
-        public OrdersClient(IConfiguration Configuration) : base(Configuration, "api/values") { }
+        public OrdersClient(IConfiguration Configuration) : base(Configuration, "api/orders") { }
         
         public Order CreateOrder(CreateOrderModel CartModel, string UserName)
         {
