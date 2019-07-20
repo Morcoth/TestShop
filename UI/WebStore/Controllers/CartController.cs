@@ -88,5 +88,35 @@ namespace WebStore.Controllers
             ViewBag.OrderId = id;
             return View();
         }
+
+        public IActionResult AddToCartAPI(int id)
+        {
+            _CartService.AddToCart(id);
+            return Json(new { id, message = $"Product {id} was added to cart" });
+        }
+
+        public IActionResult GetCartViewApi()
+        {
+            return ViewComponent("Cart");
+        }
+        public IActionResult DecrementFromCartAPI (int id)
+        {
+            _CartService.DecrementFromCart(id);
+            return Json(new { id, message = $"Products {id} was decremented from cart by one" });
+
+        }
+        public IActionResult RemoveFromCartAPI(int id)
+        {
+            _CartService.RemoveFromCart(id);
+            return Json(new { id, message = $"Products {id} was removed from cart" });
+
+        }
+        public IActionResult RemoveAllAPI()
+        {
+            _CartService.RemoveAll();
+            return Json(new {message = $"Cart was cleaned" });
+
+        }
+
     }
 }

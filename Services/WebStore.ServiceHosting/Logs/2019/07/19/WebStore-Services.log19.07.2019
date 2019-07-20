@@ -1,0 +1,64 @@
+INFO  9 2019-07-19 23:17:38,490 [9] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/values  
+
+INFO  7 2019-07-19 23:17:38,490 [7] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/products/GetSections  
+
+INFO  6 2019-07-19 23:17:38,590 [6] ?     - Executing endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  9 2019-07-19 23:17:38,625 [9] ?     - Request finished in 140.0382ms 404 
+
+INFO  6 2019-07-19 23:17:38,662 [6] ?     - Route matched with {action = "Get", controller = "Products"}. Executing action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)
+
+INFO  6 2019-07-19 23:17:38,714 [6] ?     - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+
+INFO  6 2019-07-19 23:17:38,793 [6] ?     - Executed action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting) in 126.8995ms
+
+INFO  6 2019-07-19 23:17:38,795 [6] ?     - Executed endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  6 2019-07-19 23:17:38,802 [6] ?     - Request finished in 317.5124ms 400 application/json; charset=utf-8
+
+INFO  12 2019-07-19 23:17:38,877 [12] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/products/GetBrands  
+
+INFO  12 2019-07-19 23:17:38,882 [12] ?     - Executing endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  12 2019-07-19 23:17:38,884 [12] ?     - Route matched with {action = "Get", controller = "Products"}. Executing action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)
+
+INFO  12 2019-07-19 23:17:38,888 [12] ?     - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+
+INFO  12 2019-07-19 23:17:38,891 [12] ?     - Executed action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting) in 4.3916ms
+
+INFO  12 2019-07-19 23:17:38,893 [12] ?     - Executed endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  12 2019-07-19 23:17:38,895 [12] ?     - Request finished in 17.9224ms 400 application/json; charset=utf-8
+
+INFO  12 2019-07-19 23:19:38,069 [12] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/products/GetSections  
+
+INFO  10 2019-07-19 23:19:38,069 [10] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/values  
+
+INFO  12 2019-07-19 23:19:38,162 [12] ?     - Executing endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  7 2019-07-19 23:19:38,206 [7] ?     - Request finished in 141.4245ms 404 
+
+INFO  12 2019-07-19 23:19:38,247 [12] ?     - Route matched with {action = "Get", controller = "Products"}. Executing action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)
+
+INFO  12 2019-07-19 23:19:38,313 [12] ?     - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+
+INFO  12 2019-07-19 23:19:38,395 [12] ?     - Executed action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting) in 144.0203ms
+
+INFO  12 2019-07-19 23:19:38,397 [12] ?     - Executed endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  12 2019-07-19 23:19:38,400 [12] ?     - Request finished in 337.2807ms 400 application/json; charset=utf-8
+
+INFO  10 2019-07-19 23:19:38,472 [10] ?     - Request starting HTTP/1.1 GET http://localhost:5001/api/products/GetBrands  
+
+INFO  10 2019-07-19 23:19:38,476 [10] ?     - Executing endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  10 2019-07-19 23:19:38,478 [10] ?     - Route matched with {action = "Get", controller = "Products"}. Executing action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)
+
+INFO  10 2019-07-19 23:19:38,481 [10] ?     - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+
+INFO  10 2019-07-19 23:19:38,484 [10] ?     - Executed action WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting) in 3.9198ms
+
+INFO  10 2019-07-19 23:19:38,485 [10] ?     - Executed endpoint 'WebStore.ServiceHosting.Controllers.ProductsController.GetProductById (WebStore.ServiceHosting)'
+
+INFO  10 2019-07-19 23:19:38,487 [10] ?     - Request finished in 15.8814ms 400 application/json; charset=utf-8
+

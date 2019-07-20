@@ -41,7 +41,7 @@ namespace WebStore.ServiceHosting.Controllers
         public Brand GetBrandById(int id) => _productData.GetBrandById(id);
 
         [HttpPost, ActionName("Post")]
-        public IEnumerable<ProductDTO> GetProducts([FromBody]ProductFilter Filter)
+        public PagedProductsDTO GetProducts([FromBody]ProductFilter Filter)
         {
             return _productData.GetProducts(Filter);
         }

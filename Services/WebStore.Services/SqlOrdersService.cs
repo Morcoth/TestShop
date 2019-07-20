@@ -30,10 +30,10 @@ namespace WebStore.Services
                .Include(order => order.OrderItems)
                .Where(order => order.User.UserName == UserName)
                .AsEnumerable()
-               .Select(OrderOrderDTO.ToDTO);
+               .ToDTO();
 
         public OrderDTO GetOrderById(int id)=>
-                _db.Orders.FirstOrDefault(o => o.Id == id)?.ToDTO();
+                _db.Orders.FirstOrDefault(o => o.Id == id).ToDTO();
         
 
         public OrderDTO CreateOrder(CreateOrderModel OrderModel, string UserName)

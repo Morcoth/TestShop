@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using WebStore.Domain.Entities;
 using WebStore.Domain.ViewModels.Product;
 using WebStore.Interfaces.Services;
@@ -12,26 +13,32 @@ namespace WebStore.Controllers
 {
     public class CatalogController : Controller
     {
+        private readonly IConfiguration _configuration;
         private readonly IProductData _ProductData;
 
-        public CatalogController(IProductData ProductData)
+        public CatalogController(IProductData ProductData, IConfiguration configuration)
         {
+            _configuration = configuration;
             _ProductData = ProductData;
         }
 
-        public IActionResult Shop(int? SectionId, int? BrandId)
+        public IActionResult Shop(int? SectionId, int? BrandId, int Page = 1)
         {
+
+            var page_size = int.Parse(_configuration["PageSize"]);
             var products = _ProductData.GetProducts(new ProductFilter
             {
                 SectionId = SectionId,
-                BrandId = BrandId
+                BrandId = BrandId,
+                Page = Page,
+                PageSize = page_size
             });
 
             var catalog_model = new CatalogViewModel
             {
                 BrandId = BrandId,
                 SectionId = SectionId,
-                Products = products
+                Products = products.Products
                    .Select(p => new ProductViewModel
                    {
                        Id = p.Id,
@@ -40,7 +47,13 @@ namespace WebStore.Controllers
                        Order = p.Order,
                        Price = p.Price,
                        ImageUrl = p.ImageUrl
-                   })
+                   }),
+                 PageViewModel = new PageViewModel
+                 {
+                      PageNumber = Page,
+                       PageSize = page_size,
+                       TotalItems = products.TotalCount
+                 }
                 //.Select(ProductViewModelMapper.CreateViewModel)
             };
 

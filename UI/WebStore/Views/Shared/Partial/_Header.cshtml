@@ -35,7 +35,12 @@
                         <a asp-controller="Home" asp-action="Index"><img src="images/home/logo.png" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right">
+                        <div class="pull-right" id="cartContainer">
+                            
+                            
+                            <vc:cart/>
 
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -95,3 +100,4 @@
         </div>
     </div><!--/header-bottom-->
 </header><!--/header-->
+@RenderBody()

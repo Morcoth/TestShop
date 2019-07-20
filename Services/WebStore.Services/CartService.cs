@@ -18,7 +18,7 @@ namespace WebStore.Services
         private readonly IHttpContextAccessor _HttpContextAccessor;
         private readonly string _CartName;
 
-
+        public Cart Cart { get => _CartStore.Cart; set => _CartStore.Cart = value; }
 
         public CookieCartService(IProductData ProductData, ICartStore cartStore)
         {
@@ -83,16 +83,21 @@ namespace WebStore.Services
                 Ids = _CartStore.Cart.Items.Select(item => item.ProductId).ToList()
             });
 
-            var products_view_models = products.Select(p => new ProductViewModel
+            var products_view_models = products.Products.Select(p => new ProductViewModel
             {
+                Id = p.Id,
+                ImageUrl = p.ImageUrl,
+                Order = p.Order,
+                Price = p.Price,
                 Name = p.Name,
-                Brand = p.Brand?.Name
+                Brand = p.Brand?.Name,
+
             });
 
             return new CartViewModel
             {
                 Items = _CartStore.Cart.Items.ToDictionary(
-                    x => products_view_models.First(p => p.Id == x.ProductId), 
+                    x => products_view_models.First(p => p.Id == x.ProductId),
                     x => x.Quantity)
             };
 

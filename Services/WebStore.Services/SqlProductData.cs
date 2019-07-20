@@ -24,13 +24,10 @@ namespace WebStore.Services
         public IEnumerable<Brand> GetBrands() => _db.Brands
             .AsEnumerable();
 
-       public  IEnumerable<ProductDTO> GetProducts(ProductFilter Filter)
+        public PagedProductsDTO GetProducts(ProductFilter Filter)
         {
-            IQueryable<Product> products = _db.Products;
-            if (Filter is null)
-                return products
-                   .AsEnumerable()
-                  .Select(ProductProductDTO.ToDTO);
+            IEnumerable<Product> products = _db.Products;
+
 
             if (Filter.SectionId != null)
                 products = products.Where(product => product.SectionId == Filter.SectionId);
@@ -38,17 +35,19 @@ namespace WebStore.Services
             if (Filter.BrandId != null)
                 products = products.Where(product => product.BrandId == Filter.BrandId);
 
-            return products.AsEnumerable().Select(ProductProductDTO.ToDTO);
+            return new PagedProductsDTO { Products = products.ToDTO(), TotalCount=products.Count() };
         }
 
-       public  ProductDTO GetProductById(int id)=>        
-             _db.Products
-               .Include(product => product.Brand)
-               .Include(product => product.Section)
-             .FirstOrDefault(product => product.Id == id)?.ToDTO();
+        public ProductDTO GetProductById(int id) =>
+              _db.Products
+                .Include(product => product.Brand)
+                .Include(product => product.Section)
+              .FirstOrDefault(product => product.Id == id)?.ToDTO();
 
         public Section GetSectionById(int id) => _db.Sections.FirstOrDefault(s => s.Id == id);
 
         public Brand GetBrandById(int id) => _db.Brands.FirstOrDefault(b => b.Id == id);
+
+
     }
 }
