@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebStore.DAL.Context;
 using WebStore.Domain.Entities;
+using WebStore.Logger;
 using WebStore.Interfaces.Services;
 using WebStore.Services;
 using WebStore.Services.Data;
@@ -25,12 +26,13 @@ namespace WebStore.ServiceHosting
         public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration) => Configuration = configuration;
-
+        
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddCors();
             services.AddDbContext<WebStoreContext>(options => {
-                options.UseMySql(Configuration.GetConnectionString("DefaultConection"));
+                options.UseMySql(Configuration.GetConnectionString("DefaultConection"), b=>b.MigrationsAssembly("WebStore.ServiceHosting"));
 
             });
             services.AddTransient<WebStoreContextInitializer>();
@@ -40,6 +42,8 @@ namespace WebStore.ServiceHosting
 
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
             services.AddScoped<IProductData, SqlProductData>();
+            services.AddScoped<ICartStore, CookiesCartStore>();
+
             services.AddScoped<ICartService, CookieCartService>();
             services.AddScoped<IOrderService, SqlOrdersService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -55,9 +59,10 @@ namespace WebStore.ServiceHosting
             Configuration = builder.Build();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, WebStoreContextInitializer db)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, WebStoreContextInitializer db, ILoggerFactory log)
         {
-            db.InitializeAsync();
+            log.AddLog4Net();
+            Task.Run(()=>db.InitializeAsync());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

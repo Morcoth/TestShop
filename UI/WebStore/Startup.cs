@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using WebStore.Clients.Employees;
 using WebStore.Clients.Orders;
 using WebStore.Clients.Products;
@@ -20,8 +21,10 @@ using WebStore.Domain.Entities;
 using WebStore.Domain.Models;
 using WebStore.Infrastructure.Conventions;
 using WebStore.Infrastructure.Filters;
+using WebStore.Infrastructure.Middleware;
 using WebStore.Interfaces.Api;
 using WebStore.Interfaces.Services;
+using WebStore.Logger;
 using WebStore.Services;
 using WebStore.Services.Data;
 
@@ -117,10 +120,11 @@ namespace WebStore
             //});
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env/*, WebStoreContextInitializer db*/)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory log)
         {
             //db.InitializeAsync().Wait();
 
+            log.AddLog4Net();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -133,7 +137,7 @@ namespace WebStore
             //app.UseWelcomePage("/Welcome");
 
             app.UseAuthentication();
-
+            app.UseMiddleware<ErrorHandlingMidleware>();
             //app.UseMvcWithDefaultRoute(); // "default" : "{controller=Home}/{action=Index}/{id?}"
             app.UseMvc(route =>
             {

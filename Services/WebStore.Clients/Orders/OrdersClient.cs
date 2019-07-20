@@ -16,17 +16,17 @@ namespace WebStore.Clients.Orders
     {
         public OrdersClient(IConfiguration Configuration) : base(Configuration, "api/orders") { }
         
-        public Order CreateOrder(CreateOrderModel CartModel, string UserName)
+        public OrderDTO CreateOrder(CreateOrderModel CartModel, string UserName)
         {
             var response = Post($"{_ServiceAddress}/{UserName}", CartModel);
-            return response.Content.ReadAsAsync<Order>().Result;
+            return response.Content.ReadAsAsync<OrderDTO>().Result;
 
 
         }
 
-        public Order GetOrderById(int id)
+        public OrderDTO GetOrderById(int id)
         {
-            return Get<Order>($"{_ServiceAddress}/get/{id}");
+            return Get<OrderDTO>($"{_ServiceAddress}/get/{id}");
         }
 
         public IEnumerable<CreateOrderModel> GetUserOrders(string UserName)
