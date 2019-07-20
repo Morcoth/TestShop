@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
+using WebStore.Domain.DTO.Product;
 using WebStore.Domain.Entities;
 using WebStore.Interfaces.Services;
 
@@ -44,5 +45,15 @@ namespace WebStore.Services
                 .Include(product => product.Brand)
                 .Include(product => product.Section)
                 .FirstOrDefault(product => product.Id == id);
+
+        IEnumerable<ProductDTO> IProductData.GetProducts(ProductFilter Filter)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        ProductDTO IProductData.GetProductById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

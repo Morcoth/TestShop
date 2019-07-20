@@ -31,7 +31,7 @@ namespace WebStore.Controllers
             {
                 BrandId = BrandId,
                 SectionId = SectionId,
-                Products = products.Select(ProductViewModelMapper.CreateViewModel)
+                //Products = products.Select(ProductViewModelMapper.CreateViewModel)
             };
 
             return View(catalog_model);
