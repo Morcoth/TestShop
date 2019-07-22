@@ -19,6 +19,7 @@ using WebStore.Clients.Values;
 using WebStore.DAL.Context;
 using WebStore.Domain.Entities;
 using WebStore.Domain.Models;
+using WebStore.Hubs;
 using WebStore.Infrastructure.Conventions;
 using WebStore.Infrastructure.Filters;
 using WebStore.Infrastructure.Middleware;
@@ -50,7 +51,7 @@ namespace WebStore
             services.AddScoped<IOrderService, OrdersClient>();
 
             services.AddTransient<IValuesService, ValuesClient>();
-
+            services.AddSignalR();
             services.AddIdentity<User, IdentityRole>(options =>
                 {
                     // конфигурация cookies возможна здесь
@@ -137,6 +138,10 @@ namespace WebStore
             //app.UseWelcomePage("/Welcome");
 
             app.UseAuthentication();
+            app.UseSignalR(routes=>
+            {
+                routes.MapHub<InformationHub>("/info");
+            });
             app.UseMiddleware<ErrorHandlingMidleware>();
             //app.UseMvcWithDefaultRoute(); // "default" : "{controller=Home}/{action=Index}/{id?}"
             app.UseMvc(route =>
