@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<div class="row">
+    <div class="col-sm-3">
+        <h4>
+            ServerSide
+            <a href="#" data-ajax="true"
+               data-ajax-url="@Url.Action(" GetTestView", "Ajax" )"
+               data-ajax-update="#ServerSideResultPanel"
+               data-ajax-loading="#ServerSideSpinner">
+                Loading
+            </a>
+        </h4>
+        <span id="ServerSideSpinner" style="display: none">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>
+        <div id="ServerSideResultPanel"></div>
+    </div>
+
+
+    <div class="col-sm-3">
+        <h4>ClientSide</h4>
+        <a href="#" data-ajax="true"
+           data-ajax-url="@Url.Action(" GetJson", "Ajax" , new { id=123, msg="HiToAll" })"
+           data-ajax-success="OnDataLoaded"
+           data-ajax-loading="#ClientSideSpinner">
+
+            Loading
+        </a>
+
+        <span id="ClientSideSpinner" style="display: none">
+            <i class="fa fa-spinner fa-spin"></i>
+        </span>
+        <div id="ClientSideResultPanel">
+
+
+
+        </div>
+
+    </div>
+    <div class="col-sm-3">
+        <h4>JS Render</h4>
+        <a href="#" id="LoadButton">Загрузка</a>
+        <div id="JSResultPannel"></div>
+
+    </div>
+</div>
+
+@section Scripts{
+<script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+        OnDataLoaded = function (data) {
+            var panel = $("#ClientSideResultPanel");
+            panel.empty();
+            panel.append(data.message);
+            panel.append(data.serverTime);
+        };
+        
+    
+    $("#LoadButton").click(() => {
+        console.log("SendingData");
+        $.get("@Url.Action("GetJson", "Ajax")", new { id=111, msg="HiToAllAgain" })
+
+        .done(data => {
+                const panel = $("#JSResultPannel");
+                panel.empty();
+                 panel.append(data.message);
+                 panel.append(data.serverTime);
+
+            })
+        .fail(()=>console.log("Error"));
+        })
+</script>
+
+
+
+}

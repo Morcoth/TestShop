@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>SignalR</h2>
+
+
+<div>
+    <div id="InputForm">
+        <input type ="text" id="Message" />
+        <input type ="button" id="SendButton"/>
+    </div>
+    <div id="informationBlock">
+
+    </div>
+</div>
+@section Scripts{ 
+<script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+    <script>
+        let hub_url = "http://localhost:5000/info";
+        const connection = signalR.HubConnectionBuilder()
+            .withUrl(hub_url)
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+        connection.on("Send", function (data) {
+            let element = document.createElement("p");
+            element.appendChild(document.createTextNode(data));
+            let firstelement = document.getElementById("informationBlock").firstChild;
+            document.getElementById("informationBlock").insertBefore(element, firstelement);
+
+
+        });
+        $(function () {
+            $("#SendButton").click(e => {
+                let information = document.getElementById("Message").value;
+                connection.Invoke("send", information);
+            });
+        });
+        connection.Start();
+
+    </script>
+
+}
+
